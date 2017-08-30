@@ -4241,6 +4241,9 @@ Snap.plugin(function (Snap, Element, Paper, glob, Fragment) {
         var type = tokens[1],
             params = tokens[2],
             stops = tokens[3];
+	if (!params) {
+            return null;
+        }
         params = params.split(/\s*,\s*/).map(function (el) {
             return +el == el ? +el : el;
         });
